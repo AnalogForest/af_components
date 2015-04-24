@@ -1,0 +1,51 @@
+@mixin nav-hover($color, $font-color){
+  &.active {
+    a {
+      background-color: rgba($color, .9);
+      color: $font-color;
+    }
+  }
+  &:hover, &.hovering {
+    &.dropdown-m{
+      will-change: background-color;
+      background-color: rgba($color, .9);
+      a {
+        will-change: background-color;
+        background-color: transparent;
+      }
+    }
+
+    a {
+      color: $font-color;
+      background-color: $color;
+    }
+
+  }
+}
+
+@mixin header-background {
+  background: $black url(https://cdn.shopify.com/s/files/1/0422/2601/files/color_band.gif?24292) top left repeat-x;
+  background-size: 761px 2px;
+}
+
+@mixin jquery-fade-start-hidden {
+  display:none;
+  opacity:0.0;
+  filter:alpha(opacity=0);
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

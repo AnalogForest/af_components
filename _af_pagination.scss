@@ -1,0 +1,21 @@
+#pagination {
+  text-align: center;
+  .pagination {
+    float: none;
+  }
+  li {
+    a {
+      background-color: $middle-grey;
+      color: $black;
+      @include border-radius(0);
+    }
+    &.active {
+        a {
+          background-color: $dark-grey;
+          border-color: $dark-grey;
+          color: $white;
+        }
+
+      }
+  }
+}

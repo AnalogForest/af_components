@@ -1,0 +1,8 @@
+#pagination {
+  @include clearfix;
+  clear: both;
+  .pagination{
+    float: right;
+  }
+
+}

@@ -1,0 +1,10 @@
+textarea {
+  outline: none;
+  resize: none;
+  width: 100%;
+  padding: 8px;
+}
+input {
+  padding: 8px;
+  @include trailer(.5);
+}

@@ -1,0 +1,158 @@
+$light-grey: #fdfcfa;
+$lightest-grey: lighten($light-grey,10);
+$dark-grey: #c9c1b7;
+$middle-grey: #efe9e5;
+$black: #0a0202;
+$blue: #3399FF;
+$dark-blue: #0066FF;
+$cyan: #0095D3;
+$red: #ef1616;
+$orange: #e55a29;
+$green: #8DC641;
+$white: #FFF;
+$magenta: rgb(203,0,107);
+$yellow: rgb(247, 196, 58);
+
+.cyan-text {
+  color: $cyan;
+}
+
+.magenta-text {
+  color: $magenta;
+}
+
+.orange-text {
+  color: $orange;
+}
+
+.yellow-text {
+  color: $yellow;
+}
+
+.red-text {
+  color: $red;
+}
+
+.white-text {
+  color: $white;
+}
+
+.text-light-grey {
+  color: $light-grey;
+}
+
+.cyan-badge .st0 {
+  fill: $cyan;
+}
+
+.magenta-badge .st0 {
+  fill: $magenta;
+}
+
+.yellow-badge .st0 {
+  fill: $yellow;
+}
+
+
+.bg-lightest-grey {
+  background-color: $lightest-grey;
+}
+
+.bg-light-grey {
+  background-color: $light-grey;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-middle-grey {
+  background-color: $middle-grey;
+}
+
+.bg-dark-grey {
+  background-color: $dark-grey;
+  color: $white;
+}
+
+.bg-black {
+  background-color: $black;
+  color: $white;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-dark-blue {
+  background-color: $dark-blue;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-cyan {
+  background-color: $cyan;
+}
+
+.bg-magenta {
+  background-color: $magenta;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-middle-grey {
+  background-color: $middle-grey;
+}
+
+.hover-blue:hover, .bg-blue {
+  background-color: $cyan;
+  color: $white;
+  a {
+    color: $white;
+  }
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.hover-red:hover, .bg-red {
+  background-color: $red;
+  color: $white;
+   a {
+    color: $white;
+  }
+}
+
+.hover-magenta:hover, .bg-magenta {
+  background-color: $magenta;
+  color: $white;
+   a {
+    color: $white;
+  }
+}
+
+.hover-orange:hover, .bg-orange {
+  background-color: $orange;
+  color: $white;
+   a {
+    color: $white;
+  }
+}
+
+.hover-green:hover, .bg-green {
+  background-color: $green;
+  color: $white;
+   a {
+    color: $white;
+  }
+}
+

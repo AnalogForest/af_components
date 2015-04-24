@@ -1,0 +1,277 @@
+@import "compass/typography/vertical_rhythm";
+$base-font-size: 14px;
+$base-line-height: 30px;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: false;
+
+@include establish-baseline;
+
+$mini-font-size: 10px;
+$mini-font-leading: 0.5;
+$tiny-font-size: 12px;
+$tiny-font-leading: 0.75;
+$small-font-size: 14px;
+$small-font-leading: .75;
+$base-font-size: $base-font-size;
+$base-font-leading: .75;
+$medium-font-size: 16px;
+$medium-font-leading: .9;
+$large-font-size: 18px;
+$large-font-leading: 1;
+$xlarge-font-size: 22px;
+$xlarge-font-leading: 1.1;
+$xxlarge-font-size: 26px;
+$xxlarge-font-leading: 1.5;
+$xxxlarge-font-size: 32px;
+$xxxlarge-font-leading: 1.75;
+
+
+@mixin type-scale($size) {
+   @if $size == "mini" {
+  @include adjust-font-size-to($mini-font-size);
+  @include adjust-leading-to($mini-font-leading);
+ }
+ @if $size == "tiny" {
+  @include adjust-font-size-to($tiny-font-size);
+  @include adjust-leading-to($tiny-font-leading);
+ }
+ @if $size == "small" {
+  @include adjust-font-size-to($small-font-size);
+  @include adjust-leading-to($small-font-leading);
+ }
+ @if $size == "base" {
+  @include adjust-font-size-to($base-font-size);
+  @include adjust-leading-to($base-font-leading);
+ }
+ @if $size == "medium" {
+  @include adjust-font-size-to($medium-font-size);
+  @include adjust-leading-to($medium-font-leading);
+ }
+ @if $size == "large" {
+  @include adjust-font-size-to($large-font-size);
+  @include adjust-leading-to($large-font-leading);
+ }
+ @if $size == "xlarge" {
+  @include adjust-font-size-to($xlarge-font-size);
+  @include adjust-leading-to($xlarge-font-leading);
+ }
+ @if $size == "xxlarge" {
+  @include adjust-font-size-to($xxlarge-font-size);
+  @include adjust-leading-to($xxlarge-font-leading);
+ }
+ @if $size == "xxxlarge" {
+  @include adjust-font-size-to($xxxlarge-font-size);
+  @include adjust-leading-to($xxxlarge-font-leading);
+ }
+}
+
+@mixin abel-font {
+  font-family: 'Abel', arial, helvetica, san-serif;
+}
+
+@mixin roboto-light-font {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    //text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body{
+  @include roboto-light-font;
+  color: $black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include abel-font;
+  @include leader(0);
+  @include trailer(0);
+  font-weight: 100;
+  a {
+    @include abel-font;
+  }
+}
+
+h1{
+  //@include adjust-font-size-to(84px);
+  @include type-scale(xxlarge);
+  text-transform: uppercase;
+}
+
+h2{
+  //@include adjust-font-size-to(72px);
+  @include type-scale(xlarge);
+  text-transform: uppercase;
+}
+
+h3{
+  //@include adjust-font-size-to(30px);
+  @include type-scale(large);
+  text-transform: uppercase;
+}
+
+h4{
+  //@include adjust-font-size-to(24px);
+  @include type-scale(medium);
+}
+
+h5{
+  //@include adjust-font-size-to(20px);
+  @include type-scale(medium);
+}
+
+h6{
+  //@include adjust-font-size-to(20px);
+  @include type-scale(medium);
+}
+
+ul, ol {
+  @include type-scale(medium);
+  @include trailer(.5);
+}
+
+p {
+  @include type-scale(medium);
+  @include trailer(.5);
+  @include roboto-light-font;
+  &.no-trailer {
+    @include trailer(0);
+  }
+  a {
+    @include roboto-light-font;
+  }
+}
+
+a {
+  @include roboto-light-font;
+  text-decoration: none;
+  transition: color 0.5s 0 ease;
+  color: $black;
+
+  h1, h2, h3, h4 {
+    @include abel-font;
+  }
+}
+
+@media (max-width: 767px) {
+  h1{
+    @include type-scale(xlarge);
+  }
+
+  h2{
+    @include type-scale(large);
+  }
+
+  h3{
+    @include type-scale(medium);
+  }
+
+  h4{
+    @include type-scale(medium);
+  }
+
+  h5{
+    @include type-scale(medium);
+  }
+
+  p {
+    @include type-scale(small);
+    @include trailer(.5);
+  }
+}
+
+a:hover {
+  text-decoration: none;
+  color: $magenta;
+}
+
+.mini {
+  @include type-scale(mini);
+}
+
+.tiny {
+  @include type-scale(tiny);
+}
+
+.small {
+  @include type-scale(small);
+}
+
+.base {
+  @include type-scale(base);
+}
+
+.medium {
+  @include type-scale(medium);
+}
+
+.large {
+  @include type-scale(large);
+}
+
+.xxlarge {
+  @include type-scale(xxlarge);
+}
+
+.xxxlarge {
+  @include type-scale(xxxlarge);
+}
+
+
+.center-text {
+  text-align: center;
+}
+
+.visuallyhidden {
+  @include visually-hidden;
+}
+
+.title {
+  @include type-scale(large);
+}
+
+.center {
+  text-align: center;
+}
+
+.small {
+  @include type-scale(tiny);
+}
+
+.red {
+  color: $red;
+}
+
+.error {
+  color: $red !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+blockquote {
+  display: block;
+  @include leader(1);
+  @include trailer(1);
+  margin-left: 32px;
+  padding-left: 15px;
+  border-left: 3px solid $light-grey;
+}
+
+::selection {
+  background: $cyan; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $cyan; /* Gecko Browsers */
+}
+
+// Rich text styles
+.rte {
+  a {
+    color: $cyan;
+  }
+}
+
