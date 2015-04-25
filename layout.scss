@@ -1,0 +1,138 @@
+body{
+  background: $white;
+}
+
+.clear {
+  clear: both;
+}
+
+#main {
+  @include clearfix;
+  clear: both;
+  padding-top: 99px;
+}
+
+@media (max-width: 767px) {
+  #main {
+    padding-top: 0px;
+  }
+}
+
+//Responsive images
+img{
+  width: 101%;
+  height: auto;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.site-footer {
+  background: $middle-grey;
+  padding: $row-padding $row-padding $row-padding*4;
+  clear: both;
+  p, a, .nav li a {
+    color: $black;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $magenta;
+  }
+}
+
+.row {
+  margin-bottom: 0;
+}
+.last-row {
+  margin-bottom: 0;
+}
+
+.content-container {
+  overflow: hidden;
+  margin-top: $row-padding;
+  width: 100%;
+  float: left;
+  height: 100%;
+  padding: 0;
+
+  &.no-top-margin {
+    margin-top: 0;
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.padding-l-r {
+  padding-left: $row-padding;
+  padding-right: $row-padding;
+}
+
+.with-padding, .inner-padding {
+  @include clearfix;
+  padding: $row-padding;
+}
+
+.md-show {
+    display: none;
+  }
+
+@media (max-width: 767px) {
+  .with-padding, .inner-padding {
+      padding: $row-padding/2;
+  }
+}
+
+.top-margin {
+  margin-top: $row-padding;
+}
+
+.bottom-margin {
+  margin-bottom: $row-padding;
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+  .site-title {
+    margin-left: -18px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .clear-lg{
+    clear: left;
+  }
+}
+
+@media (max-width: 992px) {
+  .md-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .clear-md {
+      clear: left;
+    }
+
+}
+
+@media (max-width: 767px) {
+  .padding-l-r {
+    padding-left: $row-padding;
+    padding-right: $row-padding;
+  }
+
+  #main {
+    .row {
+      margin-bottom: 0;
+    }
+    .col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12 {
+      @include clearfix;
+      margin-bottom: $row-padding;
+    }
+  }
+}
