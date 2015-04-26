@@ -1,10 +1,11 @@
+$font-domain: "https://s3.amazonaws.com/shared-site-assets/fonts/";
 @font-face {
   font-family: 'af_icons';
-  src:url('af_icons6.eot?bcqojw');
-  src:url('af_icons6.eot?#iefixb') format('embedded-opentype'),
-    url('af_icons6.woff?bcqo') format('woff'),
-    url('af_icons6.ttf?bcqoj') format('truetype'),
-    url('af_icons6.svg?bcqow#af-icons') format('svg');
+  src:url('#{$font-domain}af_icons6.eot?bcqojw');
+  src:url('#{$font-domain}af_icons6.eot?#iefixb') format('embedded-opentype'),
+    url('#{$font-domain}af_icons6.woff?bcqo') format('woff'),
+    url('#{$font-domain}af_icons6.ttf?bcqoj') format('truetype'),
+    url('#{$font-domain}af_icons6.svg?bcqow#af-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
