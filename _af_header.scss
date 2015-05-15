@@ -132,6 +132,21 @@
   }
 }
 
+.description-header {
+  float: left;
+  width: 100%;
+  padding: $row-padding/2;
+  margin-bottom: 0;
+  background: $middle-grey;
+
+  .breadcrumbs {
+    h3 {
+      display: inline;
+      @include type-scale(medium);
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .site-header {
     padding-left: $row-padding/4;
