@@ -1,0 +1,50 @@
+.comment-count{
+  border-bottom: 1px solid $light-grey;
+  border-top: 1px solid $light-grey;
+  padding: 0 $row-padding;
+}
+#comments {
+  padding-left: 0;
+  .comment {
+    @include clearfix;
+    @include trailer(.5);
+    border-bottom: 1px solid $light-grey;
+    border-top: 1px solid $light-grey;
+    @include padding-leader(.25);
+    @include padding-trailer(.25);
+    clear: both;
+    .commentor{
+      background: $light-grey;
+      border-right: 8px solid $dark-grey;
+      padding-left: 0;
+    }
+    .comment-meta {
+      @include padding-leader(.25);
+      @include padding-trailer(.25);
+      p {
+        @include trailer(0);
+      }
+    }
+    .avatar {
+      float: left;
+      width: auto;
+      margin-right: 16px;
+    }
+    .comment-content {
+    }
+  }
+}
+.comment-form{
+  background: $light-grey;
+  padding: $row-padding/2;
+  @include clearfix;
+  .better-validity-tooltip {
+    @include visually-hidden;
+  }
+  .invalid {
+    border: 1px solid $red;
+  }
+  .btn {
+    float: right;
+  }
+}
