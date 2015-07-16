@@ -71,6 +71,14 @@ img{
   padding-right: $row-padding;
 }
 
+.top-padding {
+  padding-top: $row-padding;
+}
+
+.bottom-padding {
+  padding-bottom: $row-padding;
+}
+
 .with-padding, .inner-padding {
   @include clearfix;
   padding: $row-padding;

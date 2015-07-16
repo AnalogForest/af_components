@@ -8,3 +8,6 @@ input {
   padding: 8px;
   @include trailer(.5);
 }
+label {
+  margin-right: 8px;
+}
