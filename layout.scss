@@ -78,10 +78,21 @@ img{
 .bottom-padding {
   padding-bottom: $row-padding;
 }
+.bottom-half-padding {
+  padding-bottom: $row-padding/2;
+}
 
 .with-padding, .inner-padding {
   @include clearfix;
   padding: $row-padding;
+}
+
+.no-left-padding {
+  padding-left: 0;
+}
+
+.no-right-padding {
+  padding-right: 0;
 }
 
 .md-show {
